@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React | 奔跑的小鸟</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/icon.png">
+    <meta name="description" content="奔跑的小鸟的个人站点">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.059b3ec9.css" as="style"><link rel="preload" href="/blog/assets/js/app.502dc61b.js" as="script"><link rel="preload" href="/blog/assets/js/2.a60b7765.js" as="script"><link rel="preload" href="/blog/assets/js/18.bf1f1b89.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.fee86d60.js"><link rel="prefetch" href="/blog/assets/js/11.e6f13bb1.js"><link rel="prefetch" href="/blog/assets/js/12.fa0134b5.js"><link rel="prefetch" href="/blog/assets/js/13.408755df.js"><link rel="prefetch" href="/blog/assets/js/14.728f1c7d.js"><link rel="prefetch" href="/blog/assets/js/15.246a3153.js"><link rel="prefetch" href="/blog/assets/js/16.22f820ea.js"><link rel="prefetch" href="/blog/assets/js/17.71a6c27b.js"><link rel="prefetch" href="/blog/assets/js/19.49d18cea.js"><link rel="prefetch" href="/blog/assets/js/3.9c2455d0.js"><link rel="prefetch" href="/blog/assets/js/4.38b1b35a.js"><link rel="prefetch" href="/blog/assets/js/5.217d3800.js"><link rel="prefetch" href="/blog/assets/js/6.d204364d.js"><link rel="prefetch" href="/blog/assets/js/7.3a4e75a2.js"><link rel="prefetch" href="/blog/assets/js/8.057a828b.js"><link rel="prefetch" href="/blog/assets/js/9.525abe54.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.059b3ec9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">奔跑的小鸟</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/javascript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/blog/react/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  React
+</a></div><div class="nav-item"><a href="/blog/interview/" class="nav-link">
+  前端面试之道
+</a></div><div class="nav-item"><a href="/blog/designPattern/" class="nav-link">
+  JavaScript设计模式
+</a></div><div class="nav-item"><a href="/blog/css/" class="nav-link">
+  CSS奇技淫巧
+</a></div><div class="nav-item"><a href="/blog/webpack/" class="nav-link">
+  Webpack
+</a></div><div class="nav-item"><a href="/blog/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/blog/linux/" class="nav-link">
+  Linux
+</a></div> <a href="https://github.com/guojianlu/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/javascript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/blog/react/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  React
+</a></div><div class="nav-item"><a href="/blog/interview/" class="nav-link">
+  前端面试之道
+</a></div><div class="nav-item"><a href="/blog/designPattern/" class="nav-link">
+  JavaScript设计模式
+</a></div><div class="nav-item"><a href="/blog/css/" class="nav-link">
+  CSS奇技淫巧
+</a></div><div class="nav-item"><a href="/blog/webpack/" class="nav-link">
+  Webpack
+</a></div><div class="nav-item"><a href="/blog/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/blog/linux/" class="nav-link">
+  Linux
+</a></div> <a href="https://github.com/guojianlu/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/react/#react" class="sidebar-link">React</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/react/#事件处理" class="sidebar-link">事件处理</a></li><li class="sidebar-sub-header"><a href="/blog/react/#鼠标和指针事件" class="sidebar-link">鼠标和指针事件</a></li></ul></li><li><a href="/blog/react/#redux" class="sidebar-link">Redux</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/react/#redux上手" class="sidebar-link">redux上⼿</a></li><li class="sidebar-sub-header"><a href="/blog/react/#reducer" class="sidebar-link">Reducer</a></li><li class="sidebar-sub-header"><a href="/blog/react/#compose" class="sidebar-link">compose</a></li><li class="sidebar-sub-header"><a href="/blog/react/#核心实现" class="sidebar-link">核心实现</a></li><li class="sidebar-sub-header"><a href="/blog/react/#createstore" class="sidebar-link">createStore</a></li><li class="sidebar-sub-header"><a href="/blog/react/#异步" class="sidebar-link">异步</a></li><li class="sidebar-sub-header"><a href="/blog/react/#applymiddleware" class="sidebar-link">applyMiddleware</a></li><li class="sidebar-sub-header"><a href="/blog/react/#redux-thunk" class="sidebar-link">redux-thunk</a></li><li class="sidebar-sub-header"><a href="/blog/react/#redux-logger" class="sidebar-link">redux-logger</a></li><li class="sidebar-sub-header"><a href="/blog/react/#redux-promise" class="sidebar-link">redux-promise</a></li><li class="sidebar-sub-header"><a href="/blog/react/#combinereducers" class="sidebar-link">combineReducers</a></li><li class="sidebar-sub-header"><a href="/blog/react/#koa-compose" class="sidebar-link">koa-compose</a></li></ul></li><li><a href="/blog/react/#react-redux" class="sidebar-link">React-Redux</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="react"><a href="#react" class="header-anchor">#</a> React</h2> <h3 id="事件处理"><a href="#事件处理" class="header-anchor">#</a> 事件处理</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>回调中使用箭头函数：此语法问题在于每次渲染时都会创建不同的回调函数。在大多数情况下，这没什么问题，但如果该回调函数作为 prop 传入子组件时，这些组件可能会进行额外的重新渲染。我们通常建议在构造器中绑定或使用 class fields 语法来避免这类性能问题( public class fields <em>实验性</em> 语法)。</p></div> <h3 id="鼠标和指针事件"><a href="#鼠标和指针事件" class="header-anchor">#</a> 鼠标和指针事件</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>通过点击元素以外的地方来关闭已打开的弹出框<br>
+通常实现这个功能的方法是在 window 对象中附上一个 click 事件以关闭弹窗</p></div> <p>注：Node.contains()返回的是一个布尔值，来表示传入的节点是否为该节点的后代节点</p> <div class="language- extra-class"><pre class="language-text"><code>class OuterClickExample extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { isOpen: false };
+    this.toggleContainer = React.createRef();
+
+    this.onClickHandler = this.onClickHandler.bind(this);
+    this.onClickOutsideHandler = this.onClickOutsideHandler.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('click', this.onClickOutsideHandler);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('click', this.onClickOutsideHandler);
+  }
+
+  onClickHandler() {
+    this.setState(currentState =&gt; ({
+      isOpen: !currentState.isOpen
+    }));
+  }
+
+  onClickOutsideHandler(event) {
+    if (this.state.isOpen &amp;&amp; !this.toggleContainer.current.contains(event.target)) {
+      this.setState({ isOpen: false });
+    }
+  }
+
+  render() {
+    return (
+      &lt;div ref={this.toggleContainer}&gt;
+        &lt;button onClick={this.onClickHandler}&gt;Select an option&lt;/button&gt;
+        {this.state.isOpen &amp;&amp; (
+          &lt;ul&gt;
+            &lt;li&gt;Option 1&lt;/li&gt;
+            &lt;li&gt;Option 2&lt;/li&gt;
+            &lt;li&gt;Option 3&lt;/li&gt;
+          &lt;/ul&gt;
+        )}
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre></div><h2 id="redux"><a href="#redux" class="header-anchor">#</a> Redux</h2> <h3 id="redux上手"><a href="#redux上手" class="header-anchor">#</a> redux上⼿</h3> <ol><li>需要⼀个store来存储数据</li> <li>store里的reducer初始化state并<strong>定义state修改规</strong></li> <li>通过dispatch一个action来提交对数据的修改</li> <li>action提交到reducer函数⾥里里，根据传⼊入的action的type，返回新的state</li></ol> <div class="language- extra-class"><pre class="language-text"><code>import {createStore} from &quot;redux&quot;;
+function countReducer(state = 0, action) {
+  switch (action.type) {
+    case &quot;ADD&quot;:
+      return state + 1;
+    case &quot;MINUS&quot;:
+      return state - 1;
+    default:
+      return state;
+  }
+}
+const store = createStore(countReducer);
+export default store;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code> 
+import React, {Component} from &quot;react&quot;;
+import store from &quot;../store/&quot;;
+
+export default class ReduxPage extends Component {
+  componentDidMount() {
+    store.subscribe(() =&gt; {
+      this.forceUpdate();
+    }); 
+  }
+  add = () =&gt; {
+    store.dispatch({type: &quot;ADD&quot;});
+  };
+  minus = () =&gt; {
+    store.dispatch({type: &quot;MINUS&quot;});
+  };
+  render() {
+    console.log(&quot;store&quot;, store); //sy-log
+    return (
+      &lt;div&gt;
+        &lt;h3&gt;ReduxPage&lt;/h3&gt;
+        &lt;p&gt;{store.getState()}&lt;/p&gt;
+        &lt;button onClick={this.add}&gt;add&lt;/button&gt;
+        &lt;button onClick={this.minus}&gt;minus&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+</code></pre></div><h3 id="reducer"><a href="#reducer" class="header-anchor">#</a> Reducer</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>reducer 就是⼀个纯函数，接收旧的 state 和 action，返回新的 state。</p></div> <div class="language- extra-class"><pre class="language-text"><code>(previousState, action) =&gt; newState
+</code></pre></div><p>思考:有如下函数， 聚合成⼀个函数，并把第一个函数的返回值传递给下一个函数，如何处理。</p> <div class="language- extra-class"><pre class="language-text"><code>function f1(arg) {
+  console.log(&quot;f1&quot;, arg);
+  return arg;
+}
+function f2(arg) {
+  console.log(&quot;f2&quot;, arg);
+  return arg; 
+}
+function f3(arg) {
+  console.log(&quot;f3&quot;, arg);
+  return arg;
+}
+</code></pre></div><h3 id="compose"><a href="#compose" class="header-anchor">#</a> compose</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>其实 compose 函数做的事就是把 const res = fn1(fn2(fn3(fn4(x)))) 这种嵌套的调用方式改成<br>
+const res = compose(fn1,fn2,fn3,fn4)(x) 的方式调用。</p></div> <div class="language- extra-class"><pre class="language-text"><code>export default function compose(...funcs) {
+  if (funcs.length === 0) {
+    return arg =&gt; arg
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0]
+  }
+
+  return funcs.reduce((a, b) =&gt; (...args) =&gt; a(b(...args)))
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>import {compose} from 'redux'
+let x = 10
+function fn1(x) {return x + 1}
+function fn2(x) {return x + 2}
+function fn3(x) {return x + 3}
+function fn4(x) {return x + 4}
+
+// 假设我这里想求得这样的值
+let a = fn1(fn2(fn3(fn4(x)))) // 10 + 4 + 3 + 2 + 1 = 20
+
+// 根据compose的功能，我们可以把上面的这条式子改成如下：
+let composeFn = compose(fn1, fn2, fn3, fn4)
+let b = composeFn(x) // 理论上也应该得到20
+其实执行的就是: [fn1,fn2,fn3.fn4].reduce((a, b) =&gt; (...args) =&gt; a(b(...args)))
+</code></pre></div><h3 id="核心实现"><a href="#核心实现" class="header-anchor">#</a> 核心实现</h3> <ul><li>存储状态state</li> <li>获取状态getState</li> <li>更新状态dispatch</li> <li>变更订阅subscribe</li></ul> <h3 id="createstore"><a href="#createstore" class="header-anchor">#</a> createStore</h3> <div class="language- extra-class"><pre class="language-text"><code>export function createStore(reducer, enhancer) {
+  if (enhancer) {
+    return enhancer(createStore)(reducer);
+  }
+
+  let currentState;
+
+  const currentListeners = [];
+  
+  function getState() {
+    return currentState;
+  }
+
+  function dispatch(action) {
+    currentState = reducer(currentState, action);
+    currentListeners.map(v =&gt; v());
+
+    return action;
+  }
+
+  function subscribe(listener) {
+    currentListeners.push(listener);
+    // 返回取消订阅的函数
+    return () =&gt; {
+      const index = currentListeners.indexOf(listener);
+      currentListeners.splice(index, 1);
+    };
+  }
+
+  // 手动执行一下dispatch，赋上初始值
+  dispatch({type:'@@XXX-OOO-REDUX'});
+  
+  return {
+    getState,
+    dispatch,
+    subscribe,
+  };
+}
+</code></pre></div><h3 id="异步"><a href="#异步" class="header-anchor">#</a> 异步</h3> <p>Redux只是个纯粹的状态管理器，默认只支持同步，实现异步任务 比如延迟，网络请求，需要中间件的 支持，比如我们使⽤最简单的redux-thunk和redux-logger 。<br>
+中间件就是⼀个函数，对 store.dispatch ⽅法进行改造，在发出 Action 和执行 Reducer 这两步之 间，添加了其他功能。</p> <h3 id="applymiddleware"><a href="#applymiddleware" class="header-anchor">#</a> applyMiddleware</h3> <div class="language- extra-class"><pre class="language-text"><code>export function applyMiddleware(...middlewares) {
+  return createStore =&gt; reducer =&gt; {
+    const store = createStore(reducer);
+    let dispatch = store.dispatch;
+    
+    const midApi = {
+      getState: store.getState,
+      dispatch: action =&gt; dispatch(action),
+    };
+
+    const middlewareChain = middlewares.map(middleware =&gt; middleware(midApi));
+
+    // 加强dispatch，执行dispatch的时候将所有的中间件全都执行一遍
+    dispatch = compose(...middlewareChain)(store.dispatch);
+
+    // 返回store，同时加强dispatch
+    return {
+      ...store,
+      dispatch,
+    };
+  }
+}
+</code></pre></div><h3 id="redux-thunk"><a href="#redux-thunk" class="header-anchor">#</a> redux-thunk</h3> <div class="language- extra-class"><pre class="language-text"><code>function thunk({ dispatch, getState }) {
+  // next 就是下一个中间件处理的结果---返回的一个新的(加强的)dispatch
+  return next =&gt; action =&gt; {
+    if (typeof action === 'function') {
+      return action(dispatch, getState);
+    }
+    return next(action);
+  }
+}
+</code></pre></div><h3 id="redux-logger"><a href="#redux-logger" class="header-anchor">#</a> redux-logger</h3> <div class="language- extra-class"><pre class="language-text"><code>function logger({ dispatch, getState }) {
+  // next 就是下一个中间件处理的结果---返回的一个新的(加强的)dispatch
+  return next =&gt; action =&gt; {
+    console.log('#############################');
+    // prev state
+    const prevState = getState();
+    console.log('prev state: ', prevState);
+
+    // next state
+    const returnValue = next(action);
+    const nextState = getState();
+    console.log('next state: ', nextState);
+
+    console.log('#############################');
+
+    return returnValue;
+  }
+}
+</code></pre></div><h3 id="redux-promise"><a href="#redux-promise" class="header-anchor">#</a> redux-promise</h3> <p><code>简版:</code></p> <div class="language- extra-class"><pre class="language-text"><code>function promise({ dispatch }) {
+  return next =&gt; action =&gt; {
+    return isPromise(action) ? action.then(dispatch) : next(action);
+  };
+}
+</code></pre></div><h3 id="combinereducers"><a href="#combinereducers" class="header-anchor">#</a> combineReducers</h3> <div class="language- extra-class"><pre class="language-text"><code>function combineReducers(reducers) {
+  // 返回一个新的reducer
+  return function combination(state = {}, action) {
+    const nextState = {};
+    let hasChanged = false;
+    for(let key in reducers) {
+      const reducer = reducers[key];
+      nextState[key] = reducer(state[key], action)
+      hasChanged = hasChanged || nextState[key] !== state[key];
+    }
+
+    hasChanged = hasChanged || Object.keys(nextState).length !== Object.keys(state).length;
+
+    return hasChanged ? nextState : state;
+  };
+}
+</code></pre></div><h3 id="koa-compose"><a href="#koa-compose" class="header-anchor">#</a> koa-compose</h3> <div class="language- extra-class"><pre class="language-text"><code>function compose (middleware) {
+  if (!Array.isArray(middleware)) throw new TypeError('Middleware stack must be an array!')
+  for (const fn of middleware) {
+    if (typeof fn !== 'function') throw new TypeError('Middleware must be composed of functions!')
+  }
+
+  return function (context, next) {
+    // last called middleware #
+    let index = -1
+    return dispatch(0)
+    function dispatch (i) {
+      if (i &lt;= index) return Promise.reject(new Error('next() called multiple times'))
+      index = i
+      let fn = middleware[i]
+      if (i === middleware.length) fn = next
+      if (!fn) return Promise.resolve()
+      try {
+        return Promise.resolve(fn(context, dispatch.bind(null, i + 1)));
+      } catch (err) {
+        return Promise.reject(err)
+      }
+    }
+  }
+}
+</code></pre></div><h2 id="react-redux"><a href="#react-redux" class="header-anchor">#</a> React-Redux</h2> <p>每次都重新调用render和getState太low了，想用更react的方式来写，需要react-redux的支持。</p> <div class="language- extra-class"><pre class="language-text"><code>$ yarn add react-redux
+</code></pre></div><p>提供了两个api</p> <ol><li>Provider 为后代组件提供store</li> <li>connect 为组件提供数据和变更方法</li></ol> <p>全局提供store，index.js</p> <div class="language- extra-class"><pre class="language-text"><code>import React from &quot;react&quot;;
+import ReactDOM from &quot;react-dom&quot;;
+import App from &quot;./App&quot;;
+import {Provider} from &quot;react-redux&quot;;
+import store from &quot;./store/&quot;;
+// 把Provider放在根组件外层，使子组件能获得store 
+ReactDOM.render(
+  &lt;Provider store={store}&gt;
+    &lt;App /&gt;
+  &lt;/Provider&gt;,
+  document.getElementById(&quot;root&quot;)
+);
+</code></pre></div><p>获取状态数据，ReactReduxPage.js</p> <div class="language- extra-class"><pre class="language-text"><code>import React, { Component } from &quot;react&quot;;
+import { connect } from &quot;react-redux&quot;;
+class ReactReduxPage extends Component {
+  render() {
+    const { num, add, minus, asyAdd } = this.props;
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;ReactReduxPage&lt;/h1&gt;
+        &lt;p&gt;{num}&lt;/p&gt;
+        &lt;button onClick={add}&gt;add&lt;/button&gt;
+        &lt;button onClick={minus}&gt;minus&lt;/button&gt;
+      &lt;/div&gt;
+    ); 
+  }
+}
+
+const mapStateToProps = state =&gt; {
+  return {
+    num: state,
+  };
+};
+
+const mapDispatchToProps = {
+  add: () =&gt; {
+    return { type: &quot;add&quot; };
+  },
+  minus: () =&gt; {
+    return { type: &quot;minus&quot; };
+  }
+}
+
+// mapDispatchToProps也可以是一个函数
+const mapDispatchToProps = (dispatch, ownProps) =&gt; {
+    let creators = {
+      add: payload =&gt; ({type: &quot;ADD&quot;, payload}),
+      minus: () =&gt; ({type: &quot;MINUS&quot;})
+    };
+    creators = bindActionCreators(creators, dispatch);
+    return {dispatch, ...creators};
+  }
+
+
+export default connect(
+  mapStateToProps, //状态映射 mapStateToProps 
+  mapDispatchToProps, //派发事件映射
+)(ReactReduxPage);
+</code></pre></div><blockquote><p>connect中的参数:state映射和事件映射</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>import React, {useContext, useReducer, useLayoutEffect} from &quot;react&quot;;
+const Context = React.createContext();
+export const connect = (
+  mapStateToProps = state =&gt; state,
+  mapDispatchToProps
+) =&gt; WrappendComponent =&gt; props =&gt; {
+  const store = useContext(Context);
+  const {dispatch, getState, subscribe} = store;
+  const stateProps = mapStateToProps(getState());
+  let dispatchProps = {dispatch};
+  
+  // 函数组件中引起更新
+  const [ignored, forceUpdate] = useReducer(x =&gt; x + 1, 0);
+
+  if (typeof mapDispatchToProps === &quot;function&quot;) {
+    dispatchProps = mapDispatchToProps(dispatch);
+  } else if (typeof mapDispatchToProps === &quot;object&quot;) {
+    dispatchProps = bindActionCreators(mapDispatchToProps, dispatch);
+  }
+
+  // 这里不能用useEffect，因为useEffect有延迟，组件渲染完成之后才会延迟执行，在组件渲染完到延迟执行的, 
+  // 这个间隙可能会有store state发生改变，但是，这个时候还没有订阅，就可能会丢失一些数据信息。
+  useLayoutEffect(() =&gt; {
+    const unsubscribe = store.subscribe(() =&gt; {
+      // 执行组件更新
+      forceUpdate();
+    });
+    return () =&gt; {
+      if (unsubscribe) {
+        unsubscribe();
+      }
+    };
+  }, [store]);
+
+  return &lt;WrappendComponent {...props} {...stateProps} {...dispatchProps} /&gt;;
+};
+
+export function Provider({store, children}) {
+  return &lt;Context.Provider value={store}&gt;{children}&lt;/Context.Provider&gt;;
+}
+
+function bindActionCreator(creator, dispatch) {
+  return (...args) =&gt; dispatch(creator(...args));
+}
+
+// 这个方法在Redux里面
+function bindActionCreators(creators, dispatch) {
+  const obj = {};
+  for (let key in creators) {
+    obj[key] = bindActionCreator(creators[key], dispatch);
+  }
+  return obj; 
+}
+
+// 自定义hook
+export function useSelector(selector) {
+  // 获取store
+  const store = useStore();
+  const { getState } = store;
+  const selectedState = selector(getState());
+
+  const [ignored, forceUpdate] = useReducer(x =&gt; x + 1, 0);
+  useLayoutEffect(() =&gt; {
+    const unsubscribe = store.subscribe(() =&gt; {
+      // 执行组件更新
+      forceUpdate();
+    });
+    return () =&gt; {
+      if (unsubscribe) {
+        unsubscribe();
+      }
+    };
+  }, [store]);
+
+  return selectedState;
+}
+
+export function useStore() {
+  const store = React.useContent(Content);
+  return store;
+}
+
+export function useDispatch() {
+  const store = useStore();
+  return store.dispatch;
+}
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/guojianlu/blog/edit/master/react/README.md" target="_blank" rel="noopener noreferrer">编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">9/21/2020, 10:58:50 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.502dc61b.js" defer></script><script src="/blog/assets/js/2.a60b7765.js" defer></script><script src="/blog/assets/js/18.bf1f1b89.js" defer></script>
+  </body>
+</html>

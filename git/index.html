@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git常见命令 | 奔跑的小鸟</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/icon.png">
+    <meta name="description" content="奔跑的小鸟的个人站点">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.059b3ec9.css" as="style"><link rel="preload" href="/blog/assets/js/app.502dc61b.js" as="script"><link rel="preload" href="/blog/assets/js/2.a60b7765.js" as="script"><link rel="preload" href="/blog/assets/js/14.728f1c7d.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.fee86d60.js"><link rel="prefetch" href="/blog/assets/js/11.e6f13bb1.js"><link rel="prefetch" href="/blog/assets/js/12.fa0134b5.js"><link rel="prefetch" href="/blog/assets/js/13.408755df.js"><link rel="prefetch" href="/blog/assets/js/15.246a3153.js"><link rel="prefetch" href="/blog/assets/js/16.22f820ea.js"><link rel="prefetch" href="/blog/assets/js/17.71a6c27b.js"><link rel="prefetch" href="/blog/assets/js/18.bf1f1b89.js"><link rel="prefetch" href="/blog/assets/js/19.49d18cea.js"><link rel="prefetch" href="/blog/assets/js/3.9c2455d0.js"><link rel="prefetch" href="/blog/assets/js/4.38b1b35a.js"><link rel="prefetch" href="/blog/assets/js/5.217d3800.js"><link rel="prefetch" href="/blog/assets/js/6.d204364d.js"><link rel="prefetch" href="/blog/assets/js/7.3a4e75a2.js"><link rel="prefetch" href="/blog/assets/js/8.057a828b.js"><link rel="prefetch" href="/blog/assets/js/9.525abe54.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.059b3ec9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">奔跑的小鸟</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/javascript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/blog/interview/" class="nav-link">
+  前端面试之道
+</a></div><div class="nav-item"><a href="/blog/designPattern/" class="nav-link">
+  JavaScript设计模式
+</a></div><div class="nav-item"><a href="/blog/css/" class="nav-link">
+  CSS奇技淫巧
+</a></div><div class="nav-item"><a href="/blog/webpack/" class="nav-link">
+  Webpack
+</a></div><div class="nav-item"><a href="/blog/git/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Git
+</a></div><div class="nav-item"><a href="/blog/linux/" class="nav-link">
+  Linux
+</a></div> <a href="https://github.com/guojianlu/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/javascript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/blog/interview/" class="nav-link">
+  前端面试之道
+</a></div><div class="nav-item"><a href="/blog/designPattern/" class="nav-link">
+  JavaScript设计模式
+</a></div><div class="nav-item"><a href="/blog/css/" class="nav-link">
+  CSS奇技淫巧
+</a></div><div class="nav-item"><a href="/blog/webpack/" class="nav-link">
+  Webpack
+</a></div><div class="nav-item"><a href="/blog/git/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Git
+</a></div><div class="nav-item"><a href="/blog/linux/" class="nav-link">
+  Linux
+</a></div> <a href="https://github.com/guojianlu/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Git常见命令</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/git/#git初始化" class="sidebar-link">Git初始化</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/git/#初始化仓库" class="sidebar-link">初始化仓库</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/git/#git忽略不应该跟踪的文件" class="sidebar-link">Git忽略不应该跟踪的文件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/git/#git配置" class="sidebar-link">Git配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/git/#修改用户信息" class="sidebar-link">修改用户信息</a></li><li class="sidebar-sub-header"><a href="/blog/git/#获取name和email" class="sidebar-link">获取name和email</a></li><li class="sidebar-sub-header"><a href="/blog/git/#设置不同的仓库源" class="sidebar-link">设置不同的仓库源</a></li><li class="sidebar-sub-header"><a href="/blog/git/#第一次推送内容到master分支" class="sidebar-link">第一次推送内容到master分支</a></li><li class="sidebar-sub-header"><a href="/blog/git/#克隆远程仓库" class="sidebar-link">克隆远程仓库</a></li></ul></li><li><a href="/blog/git/#添加文件" class="sidebar-link">添加文件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/git/#提交文件" class="sidebar-link">提交文件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/git/#时光穿梭机" class="sidebar-link">时光穿梭机</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/git/#获取当前仓库的状态" class="sidebar-link">获取当前仓库的状态</a></li><li class="sidebar-sub-header"><a href="/blog/git/#查看修改的内容" class="sidebar-link">查看修改的内容</a></li><li class="sidebar-sub-header"><a href="/blog/git/#版本回退" class="sidebar-link">版本回退</a></li><li class="sidebar-sub-header"><a href="/blog/git/#管理修改" class="sidebar-link">管理修改</a></li><li class="sidebar-sub-header"><a href="/blog/git/#撤销修改" class="sidebar-link">撤销修改</a></li><li class="sidebar-sub-header"><a href="/blog/git/#删除文件" class="sidebar-link">删除文件</a></li></ul></li><li><a href="/blog/git/#分支管理" class="sidebar-link">分支管理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/git/#创建分支" class="sidebar-link">创建分支</a></li><li class="sidebar-sub-header"><a href="/blog/git/#切换分支" class="sidebar-link">切换分支</a></li><li class="sidebar-sub-header"><a href="/blog/git/#查看所有分支" class="sidebar-link">查看所有分支</a></li><li class="sidebar-sub-header"><a href="/blog/git/#合并分支" class="sidebar-link">合并分支</a></li><li class="sidebar-sub-header"><a href="/blog/git/#删除分支" class="sidebar-link">删除分支</a></li><li class="sidebar-sub-header"><a href="/blog/git/#解决冲突" class="sidebar-link">解决冲突</a></li><li class="sidebar-sub-header"><a href="/blog/git/#bug分支" class="sidebar-link">Bug分支</a></li><li class="sidebar-sub-header"><a href="/blog/git/#feature分支" class="sidebar-link">Feature分支</a></li></ul></li><li><a href="/blog/git/#git提交信息检查" class="sidebar-link">Git提交信息检查</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/git/#git高阶操作" class="sidebar-link">Git高阶操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/git/#git-rebase" class="sidebar-link">git rebase</a></li><li class="sidebar-sub-header"><a href="/blog/git/#cherry-pick" class="sidebar-link">cherry-pick</a></li><li class="sidebar-sub-header"><a href="/blog/git/#删除-git-缓存文件" class="sidebar-link">删除 Git 缓存文件</a></li><li class="sidebar-sub-header"><a href="/blog/git/#如何强制提交" class="sidebar-link">如何强制提交</a></li><li class="sidebar-sub-header"><a href="/blog/git/#revert-和-reset区别" class="sidebar-link">revert 和 reset区别</a></li><li class="sidebar-sub-header"><a href="/blog/git/#创建tag" class="sidebar-link">创建Tag</a></li><li class="sidebar-sub-header"><a href="/blog/git/#其他" class="sidebar-link">其他</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git常见命令"><a href="#git常见命令" class="header-anchor">#</a> Git常见命令</h1> <h2 id="git初始化"><a href="#git初始化" class="header-anchor">#</a> Git初始化</h2> <h4 id="git授权ssh"><a href="#git授权ssh" class="header-anchor">#</a> Git授权SSH</h4> <p>大多数 Git 服务器都会选择使用 SSH 公钥来进行授权。在 Github 或者 Gitlab 上提交代码，我们需要把 SSH 公钥复制托管到Github的</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>personal setting -&gt; ssh keys</p></div> <h4 id="生成-ssh-key-方法"><a href="#生成-ssh-key-方法" class="header-anchor">#</a> 生成 SSH-Key 方法</h4> <div class="language- extra-class"><pre class="language-text"><code># 进入ssh目录
+$ cd ~/.ssh           
+# 生成ssh公私钥
+$ ssh-keygen              
+# 复制ssh公钥
+$ cat ~/.ssh/id_rsa.pub   
+</code></pre></div><h2 id="初始化仓库"><a href="#初始化仓库" class="header-anchor">#</a> 初始化仓库</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>可以在空目录初始化仓库，也能是已有的项目初始化仓库</p></div> <div class="language- extra-class"><pre class="language-text"><code># 在当前目录新建一个Git代码库
+$ git init                        
+
+# 新建一个目录，将其初始化为Git代码库
+$ git init &lt;project-name&gt;         
+
+# clone git仓库
+$ git clone &lt;git-hub-url&gt;  
+
+# [高阶用法] clone git仓库并且制定分支
+$ git clone &lt;url&gt; -b &lt;branch&gt; 
+</code></pre></div><h2 id="git忽略不应该跟踪的文件"><a href="#git忽略不应该跟踪的文件" class="header-anchor">#</a> Git忽略不应该跟踪的文件</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>.gitignore 文件显式地指定了哪些文件不应被 Git 追踪，即被 Git 忽略掉。例如开发过程中 node_module，.vscode 等文件不需要被跟踪和提交，可以在初始化的忽略它们。</p></div> <div class="language- extra-class"><pre class="language-text"><code># .gitignore 文件
+node_module
+.vscode
+</code></pre></div><h2 id="git配置"><a href="#git配置" class="header-anchor">#</a> Git配置</h2> <h3 id="修改用户信息"><a href="#修改用户信息" class="header-anchor">#</a> 修改用户信息</h3> <div class="language- extra-class"><pre class="language-text"><code># 配置信息列表
+$ git config --list     
+
+# 设置用户名
+$ git config --global user.name &quot;jerry&quot;
+
+# 设置邮箱
+$ git config --global user.email 'xxxx@qq.com'
+</code></pre></div><h3 id="获取name和email"><a href="#获取name和email" class="header-anchor">#</a> 获取name和email</h3> <div class="language- extra-class"><pre class="language-text"><code>$ git config user.name
+$ git config user.email
+</code></pre></div><h3 id="设置不同的仓库源"><a href="#设置不同的仓库源" class="header-anchor">#</a> 设置不同的仓库源</h3> <div class="language- extra-class"><pre class="language-text"><code># 查看帮助
+$ git remote --help                   
+
+# 查看不同源
+$ git remote
+
+# 添加不同地址的源，并取一个别名
+$ git remote add [name] [url]
+$ git remote add origin git@github.com:xxxxx/xxx
+
+# 删除一个源
+$ git remote remove [name] 
+</code></pre></div><h3 id="第一次推送内容到master分支"><a href="#第一次推送内容到master分支" class="header-anchor">#</a> 第一次推送内容到master分支</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>-u</code>参数不仅把本地master分支的内容推送到远程仓库的master分支上，而且和远程仓库相关联起来<br>
+随后的远程推送内容，只需要<code>$ git push origin master</code>命令即可</p></div> <div class="language- extra-class"><pre class="language-text"><code>$ git push -u origin master
+</code></pre></div><h3 id="克隆远程仓库"><a href="#克隆远程仓库" class="header-anchor">#</a> 克隆远程仓库</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>git</code>协议是SSH协议，大部分克隆可以使用这种协议<br> <code>https</code>协议是口令协议，是针对只开发了https协议的网络</p></div> <div class="language- extra-class"><pre class="language-text"><code>$ git clone git@github.com:xxx/xxx
+$ git clone https://github.com/xxx/xxx
+</code></pre></div><h2 id="添加文件"><a href="#添加文件" class="header-anchor">#</a> 添加文件</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>可以添加一个或者多个文件</p></div> <div class="language- extra-class"><pre class="language-text"><code>$ git add readme.txt
+$ git add file1.txt file2.txt
+</code></pre></div><h2 id="提交文件"><a href="#提交文件" class="header-anchor">#</a> 提交文件</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>-m '说明注释' 代表本次提交的说明注释信息。
+--amend 对最新一条commit 进行修正。</p></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>&quot;amend&quot; 是「修正」的意思。在提交时，如果加上 --amend 参数，Git 不会在当前 commit 上增加 commit，而是会把当前commit 里的内容和暂存区(stageing area)里的内容合并起来后创建一个新的 commit，用这个新的 commit 把当前 commit替换掉。所以 commit --amend 做的事就是它的字面意思:对最新一条commit 进行修正。</p></div> <div class="language- extra-class"><pre class="language-text"><code>$ git commit -m '说明注释'
+
+# 对上一次commit进行修正
+$ git add fix.txt		
+$ git commit --amend
+</code></pre></div><h2 id="时光穿梭机"><a href="#时光穿梭机" class="header-anchor">#</a> 时光穿梭机</h2> <h3 id="获取当前仓库的状态"><a href="#获取当前仓库的状态" class="header-anchor">#</a> 获取当前仓库的状态</h3> <div class="language- extra-class"><pre class="language-text"><code>$ git status
+</code></pre></div><h3 id="查看修改的内容"><a href="#查看修改的内容" class="header-anchor">#</a> 查看修改的内容</h3> <div class="language- extra-class"><pre class="language-text"><code>$ git diff
+</code></pre></div><h3 id="版本回退"><a href="#版本回退" class="header-anchor">#</a> 版本回退</h3> <h4 id="查看提交日志"><a href="#查看提交日志" class="header-anchor">#</a> 查看提交日志</h4> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>HEAD</code>：代表当前版本<br> <code>HEAD^</code>：代表上一个版本<br> <code>HEAD^^</code>：代表上上一个版本</p></div> <div class="language- extra-class"><pre class="language-text"><code>$ git log
+</code></pre></div><h4 id="查看命令日志"><a href="#查看命令日志" class="header-anchor">#</a> 查看命令日志</h4> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>$ git reflog</code>查看的是每一次的命令的记录，头部有版本号</p></div> <h4 id="版本回退-2"><a href="#版本回退-2" class="header-anchor">#</a> 版本回退</h4> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>--hard 后面接HEAD或者具体的版本号<br>
+例如：<code>$ git reset --hard HEAD^</code>回退到上一个版本<br>
+例如：<code>$ git reset --hard 48e56e</code>回退到指定版本<br>
+注：回退后，<code>$ git log</code>命令不会输出该版本往后的版本记录，这时可以使用<code>$ git reflog</code>命令先找到版本号</p></div> <div class="language- extra-class"><pre class="language-text"><code># 丢弃最新的提交
+$ git reset --hard HEAD^
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>reset 的本质: 移动 HEAD 以及它所指向的branch。</p></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>reset --hard: 重置工作目录。你的工作目录里的内容会被完全重置为和 HEAD 的新位置相同的内容。换句话说，就是你的未提交的修改会被全部擦掉。</p></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>reset --soft: 保留工作目录。 会在重置 HEAD 和 branch 时，保留工作目录和暂存区中的内容，并把重置 HEAD 所带来的新的差异放进暂存区。</p></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>reset 不加参数: 保留工作目录，并清空暂存区。reset 如果不加参数，那么默认使用 --mixed 参数。它的行为是:保留工作目录，并且清空暂存区。也就是说，工作目录的修改、暂存区的内容以及由 reset 所导致的新的文件差异，都会被放进工作目录。简而言之，就是「把所有差异都混合(mixed)放在工作目录中」。</p></div> <h3 id="管理修改"><a href="#管理修改" class="header-anchor">#</a> 管理修改</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>git 管理的是修改而不是文件</p></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>git reset HEAD test.txt    to unstage   撤销暂存</p></div> <h4 id="管理修改示例"><a href="#管理修改示例" class="header-anchor">#</a> 管理修改示例</h4> <ul><li>修改文件</li> <li>添加文件到暂存区</li> <li>继续修改文件</li> <li>提交文件到仓库</li></ul> <p><strong>结果</strong>：git只会提交暂存区的内容，即只提交了第一次修改的内容，第二次修改的内容没有提交。</p> <h4 id="办法一"><a href="#办法一" class="header-anchor">#</a> 办法一</h4> <ul><li>先<code>$ git commit</code>提交第一次修改</li> <li>再<code>$ git add</code>添加第二次修改</li> <li>最后<code>$ git commit</code>提交第二次修改</li></ul> <h4 id="办法二"><a href="#办法二" class="header-anchor">#</a> 办法二</h4> <ul><li>先不提交第一次修改</li> <li><code>$ git add</code>添加第二次修改到暂存区</li> <li><code>$ git commit</code>一起提交第一次、第二次的修改</li></ul> <h3 id="撤销修改"><a href="#撤销修改" class="header-anchor">#</a> 撤销修改</h3> <p>撤销修改分三种情况</p> <ul><li><code>$ git add</code>之前</li> <li><code>$ git commit</code>之前</li> <li><code>$ git commit</code>之后</li></ul> <h4 id="情况一解决办法"><a href="#情况一解决办法" class="header-anchor">#</a> 情况一解决办法</h4> <p>直接使用<code>$ git checkout -- xxx</code>命令，丢掉当前工作区的修改</p> <div class="language- extra-class"><pre class="language-text"><code>$ git checkout -- readme.txt
+</code></pre></div><h4 id="情况二解决办法"><a href="#情况二解决办法" class="header-anchor">#</a> 情况二解决办法</h4> <ul><li>首先使用<code>$ git reset HEAD xx</code>命令，撤销暂存区的修改</li> <li>随后使用<code>$ git checkout -- xx</code>命令，丢弃工作区的修改</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ git reset HEAD readme.txt
+$ git checkout -- readme.txt
+</code></pre></div><h4 id="情况三解决办法"><a href="#情况三解决办法" class="header-anchor">#</a> 情况三解决办法</h4> <p>使用版本回退</p> <h3 id="删除文件"><a href="#删除文件" class="header-anchor">#</a> 删除文件</h3> <ul><li>确定删除某一个文件</li> <li>误删了某一个文件</li></ul> <h4 id="情况一解决办法-2"><a href="#情况一解决办法-2" class="header-anchor">#</a> 情况一解决办法</h4> <div class="language- extra-class"><pre class="language-text"><code>$ git rm test.txt
+$ git commit -m 'sure remove test.txt'
+</code></pre></div><h4 id="情况二解决办法-2"><a href="#情况二解决办法-2" class="header-anchor">#</a> 情况二解决办法</h4> <div class="language- extra-class"><pre class="language-text"><code>$ git reset HEAD test.txt
+$ git checkout -- test.txt
+</code></pre></div><h2 id="分支管理"><a href="#分支管理" class="header-anchor">#</a> 分支管理</h2> <h3 id="创建分支"><a href="#创建分支" class="header-anchor">#</a> 创建分支</h3> <div class="language- extra-class"><pre class="language-text"><code>$ git branch xxx
+</code></pre></div><h3 id="切换分支"><a href="#切换分支" class="header-anchor">#</a> 切换分支</h3> <div class="language- extra-class"><pre class="language-text"><code>$ git checkout xxx
+</code></pre></div><h4 id="创建并切换分支的简写"><a href="#创建并切换分支的简写" class="header-anchor">#</a> 创建并切换分支的简写</h4> <div class="language- extra-class"><pre class="language-text"><code>$ git checkout -b xxx
+</code></pre></div><h3 id="查看所有分支"><a href="#查看所有分支" class="header-anchor">#</a> 查看所有分支</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>带<code>*</code>号的表示当前分支</p></div> <div class="language- extra-class"><pre class="language-text"><code>$ git branch
+# 查看本地分支及远端分支
+$ git branch -la 
+</code></pre></div><h3 id="合并分支"><a href="#合并分支" class="header-anchor">#</a> 合并分支</h3> <div class="language- extra-class"><pre class="language-text"><code>$ git merge xxx
+</code></pre></div><h3 id="删除分支"><a href="#删除分支" class="header-anchor">#</a> 删除分支</h3> <div class="language- extra-class"><pre class="language-text"><code># 强制删除本地分支
+$ git branch -D [branchName]  
+
+# 删除已经Merge过的分支
+$ git branch -d [branchName] 
+
+# 删除远端多余分支
+git push -delete origin &lt;branchName&gt; 
+</code></pre></div><h3 id="解决冲突"><a href="#解决冲突" class="header-anchor">#</a> 解决冲突</h3> <p>当合并分支出现冲突时，可以利用<code>git status</code>查看冲突的位置<br>
+手动解决冲突后</p> <div class="language- extra-class"><pre class="language-text"><code>$ git add 冲突文件
+$ git merge --continue
+
+# 放弃解决冲突，取消 merge 
+$ git merge —abort
+</code></pre></div><h3 id="bug分支"><a href="#bug分支" class="header-anchor">#</a> Bug分支</h3> <p>工作做一半，突然接到一个任务解决bug，该怎样进行合理的git操作</p> <ul><li><code>git stash</code>命令隐藏当前工作区</li> <li><code>git checkout -b xx</code>命令创建并切换到bug分支</li> <li><code>git add xx</code> <code>git commit -m xx</code>修复提交bug分支</li> <li><code>git checkout master</code>切换到主分支</li> <li><code>git merge xxx</code>合并bug分支到主分支</li> <li><code>git branch -d xx</code>删除bug分支</li> <li><code>git stash pop</code>恢复隐藏的工作现成</li></ul> <h3 id="feature分支"><a href="#feature分支" class="header-anchor">#</a> Feature分支</h3> <p>开发一个新功能mask1，但不保证后续这个新功能需不需要。</p> <ul><li><code>git checkout -b mask1</code>创建mask1分支</li> <li><code>git add xx</code> <code>git commit -m xxx</code>开发完毕并提交到当前mask1分支上</li></ul> <p>上级通知，此功能砍掉，不需要了</p> <ul><li><code>git checkout dev</code>切换到开发分支</li> <li><code>git branch -D mask1</code>删除mask1分支的内容</li></ul> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>-d</code>小写的参数d，再删除时会被提示，改分支没有合并，无法删除<br> <code>-D</code>大写的参数D，代表强制删除</p></div> <h2 id="git提交信息检查"><a href="#git提交信息检查" class="header-anchor">#</a> Git提交信息检查</h2> <div class="language- extra-class"><pre class="language-text"><code># 查看当前工作区改动点
+$ git diff                               
+
+# 提交hash1和hash2的差异
+$ git diff commit_hash1 commit_hash2 
+
+# 分支a和b的差异
+$ git diff branch_a branch_b  
+
+# 显示暂存区和上一条提交之间的差异
+$ git diff --staged
+
+# 显示工作区与指定提交版本之间的差异
+$ git diff commit_hash 
+
+# 当前改动文件
+$ git status     
+
+# 查看提交历史
+$ git log                
+
+# 提交历史缩减一行查看，主要是提交Hash值
+$ git log --pretty=oneline      
+</code></pre></div><h2 id="git高阶操作"><a href="#git高阶操作" class="header-anchor">#</a> Git高阶操作</h2> <h3 id="git-rebase"><a href="#git-rebase" class="header-anchor">#</a> git rebase</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>给你的 commit序列重新设置基础点(也就是父 commit)。展开来说就是，把你指定的 commit 以及它所在的 commit 串，以指定的目标 commit 为基础，依次重新提交一次。<br>
+需要说明的是，rebase 是站在需要被 rebase 的 commit 上进行操作，这点和 merge 是不同的。</p></div> <div class="language- extra-class"><pre class="language-text"><code># 变基
+$ git rebase master 
+</code></pre></div><blockquote><p>rebase 过程可能会出现冲突，解决冲突后</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>$ git add .
+# 接下来git会继续应用剩余的补丁
+$ git rebase --continue  
+# 任何时候都可以使用如下命令终止rebase,分支会恢复到rebase开始前的状态
+$ git rebase --abort
+</code></pre></div><h3 id="cherry-pick"><a href="#cherry-pick" class="header-anchor">#</a> cherry-pick</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>把本分支或其他分支的某一次提交合并到当前分支</p></div> <div class="language- extra-class"><pre class="language-text"><code># 查看并获取某次提交的hash
+$ git log
+
+# 切换到master分支
+$ git checkout master
+
+# 将hash_a的commit合并到master分支
+$ git cherry-pick hash_a
+</code></pre></div><h3 id="删除-git-缓存文件"><a href="#删除-git-缓存文件" class="header-anchor">#</a> 删除 Git 缓存文件</h3> <p>场景： 有些情况开发者把原有不需要提交的代码提交到了远端仓库，再使用.gitignore忽略文件不生效。哪怕我们删除后再提交也没有办法忽略。这种情况下我们应该怎么解决？</p> <p>方法： 我们可以使用git rm --cache 删除原来git跟踪的文件缓存，再在.gitignore里面添加忽略文件</p> <div class="language- extra-class"><pre class="language-text"><code>## 当我们需要删除暂存区或分支上的文件, 同时工作区也不需要这个文件了, 可以使用
+$ git rm file_path 
+
+## 当我们需要删除暂存区或分支上的文件, 但本地又需要使用, 只是不希望这个文件被版本控制, 可以使用
+# PS: file_path 为文件路径
+$ git rm --cached file_path
+</code></pre></div><h3 id="如何强制提交"><a href="#如何强制提交" class="header-anchor">#</a> 如何强制提交</h3> <p>场景： 对于多人协作开发，有些时候我们会遇到版本管理混乱的情况，例如：远端版本错误了，但本地版本是正确的。 如何才能让强制更新远端版本，保持和本地工作区环境一样？</p> <p>方法： 强制push本地正确的版本，但是慎用。因为它是不可逆转的。</p> <div class="language- extra-class"><pre class="language-text"><code># 强制更新，慎用
+$ git push origin master --force  
+</code></pre></div><h3 id="revert-和-reset区别"><a href="#revert-和-reset区别" class="header-anchor">#</a> revert 和 reset区别</h3> <p>场景： 有些时候开发者需要退回到某次正确的提交记录，有些时候开发者的commit错误了，这时候可以使用 git revert 和 git reset。</p> <ul><li>git revert： 撤销某次操作，会产生一次新的commit记录，这个新的commit会把需要revert的那个commit的内容对冲掉。</li> <li>git reset ： 撤销某次提交，但是此次之后的修改都会被退回到暂存区。</li></ul> <h3 id="创建tag"><a href="#创建tag" class="header-anchor">#</a> 创建Tag</h3> <div class="language- extra-class"><pre class="language-text"><code># 创建tag
+# 创建标注标签
+$ git tag -a daily/0.0.1 -m &quot;add develop file&quot; 
+
+# 简单创建tag
+$ git tag daily/0.0.1       
+
+# 删除标签
+$ git tag -d v1.0.0  
+
+# 分享tag到远端
+$ git push origin [tagname]
+$ git push origin --tags 
+
+# 如何已某个tag创建分支
+$ git checkout -b &lt;newbranch&gt; &lt;tagname&gt;
+</code></pre></div><h3 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h3> <h4 id="如果你想看某个具体的-commit-的改动内容-可以用-show-命令"><a href="#如果你想看某个具体的-commit-的改动内容-可以用-show-命令" class="header-anchor">#</a> 如果你想看某个具体的 commit 的改动内容，可以用 show 命令</h4> <div class="language- extra-class"><pre class="language-text"><code># 看当前 commit
+$ git show
+
+$ git show 5e68b0d8	
+
+# 看指定 commit 中的指定文件
+$ git show 5e68b0d8 list.txt
+</code></pre></div><h4 id="checkout-的本质"><a href="#checkout-的本质" class="header-anchor">#</a> checkout 的本质</h4> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>checkout 并不止可以切换 branch。checkout 本质上的功能其实是: 签出( checkout )指定的 commit。<br>
+git checkout branch 的本质，其实是把 HEAD指向指定的branch，然后签出这个 branch 所对应的 commit 的工作目录。</p></div> <div class="language- extra-class"><pre class="language-text"><code># 树状
+$ git log —graph
+
+# 只能往回看
+$ git log --prety=oneline
+
+# 查看所有操作记录
+$ git reflog
+
+# 丢弃工作区的修改
+$ git checkout -- file   
+
+# 将file的内容从暂存区移除回工作区
+$ git reset HEAD file  		 
+
+# 修改分支名称
+$ git branch -m branchName alise 
+
+# 重命名并将修改添加到暂存区
+$ git mv test.txt test2.txt  
+
+# 删除一个文件并将修改添加到暂存区
+$ git rm test.txt 
+
+$ git commit --amend -m '修正上一次的提交信息'
+
+# 仅查看最近3条的提交信息
+$ git log -3 
+
+$ git log —-pretty=oneline
+
+# 没有被 track 的文件(即从来没有被 add 过的文件不会被 stash 起来，因为 Git 会忽略它们。如果想把这些文件也一起 stash，可以加上 `-u` 参数，它是 `--include-untracked` 的简写。
+$ git stash -u
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/guojianlu/blog/edit/master/git/README.md" target="_blank" rel="noopener noreferrer">编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/22/2020, 7:23:37 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.502dc61b.js" defer></script><script src="/blog/assets/js/2.a60b7765.js" defer></script><script src="/blog/assets/js/14.728f1c7d.js" defer></script>
+  </body>
+</html>
